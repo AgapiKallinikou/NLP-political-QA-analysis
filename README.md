@@ -25,6 +25,12 @@ The project is divided into progressive phases to demonstrate the evolution from
 * **Techniques:** Custom PyTorch Training Loops, Weighted Cross-Entropy for severe class imbalance, Optuna Hyperparameter Tuning.
 * **Key Finding:** **DeBERTa-v3** achieved the best generalization (Kaggle Score: 0.66) by utilizing a maximum sequence length (512) to successfully decode long-winded political "waffling".
 
+### [Phase 3: Prompt Engineering](./03_PromptEngineering/)
+* **Focus:** Evaluating Generative Large Language Models (LLMs) purely through prompt design without updating model weights (Zero-Shot, Few-Shot, Chain-of-Thought).
+* **Models:** `Qwen3.5` family (0.8B, 2B, 4B).
+* **Techniques:** Prompt Optimization, Structural Text Anchoring, 4-bit Quantization, Greedy Decoding.
+* **Key Finding:** Base generative models exhibit inherent "leniency," mistaking diplomatic filler for clear replies. **Qwen3.5-2B (Zero-Shot)** emerged as the most balanced and robust configuration (Macro F1 ≈ 0.43), effectively avoiding the accuracy traps and memory limitations of other setups.
+
 *(Note: Future phases will be added here as the project progresses).*
 
 ---
