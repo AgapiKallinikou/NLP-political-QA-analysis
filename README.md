@@ -31,14 +31,30 @@ The project is divided into progressive phases to demonstrate the evolution from
 * **Techniques:** Prompt Optimization, Structural Text Anchoring, 4-bit Quantization, Greedy Decoding.
 * **Key Finding:** Base generative models exhibit inherent "leniency," mistaking diplomatic filler for clear replies. **Qwen3.5-2B (Zero-Shot)** emerged as the most balanced and robust configuration (Macro F1 ≈ 0.43), effectively avoiding the accuracy traps and memory limitations of other setups.
 
-*(Note: Future phases will be added here as the project progresses).*
+## [Phase 4: D3-Agentic Prompting](./04_D3_Agentic_Prompting/)
+* **Focus:** Designing a multi-agent reasoning pipeline for interpretable political response classification.
+* **Architecture:** The system decomposes the task into specialized reasoning agents:
+1. Question Intent Agent  
+2. Answer Content Agent  
+3. Gap & Evasion Agent  
+4. Decision Agent
+* **Techniques**
+1.Multi-agent prompting
+2.Structured JSON reasoning
+3.DSPy optimization
+4.Intermediate reasoning extraction
+5.Explainable classification pipelines
+6.Local LLM inference with Qwen-0.8B
+
+* **Key Finding**
+Agentic decomposition significantly improved interpretability and error tracing while revealing important limitations of lightweight local LLMs on long political monologues and multi-part questions.
 
 ---
 
 ## 🛠️ Global Tech Stack
 * **Language:** Python 3.x
 * **Deep Learning Framework:** PyTorch
-* **NLP Libraries:** Hugging Face `transformers`, NLTK, Gensim
+* **NLP Libraries:** Hugging Face `transformers`, NLTK, Gensim, DSPy
 * **Machine Learning & Tuning:** Scikit-Learn, Optuna
 * **Data Manipulation & Visualization:** Pandas, NumPy, Matplotlib, Seaborn
 * **Environment:** Kaggle / Jupyter Notebooks
